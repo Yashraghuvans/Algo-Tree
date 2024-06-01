@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <queue>
+#include <stack>
+#include <ostream>
+#include <istream>
+
+int main ()
+{
+  // Declare your queue of type std::string
+  std::queue<std::string> q;
+
+  // Push 1 to 3
+  q.push ("1");
+  q.push ("2");
+  q.push ("3");
+
+  // Declare a string variable
+  std::string input;
+
+  // Prompt
+  std::cout << "- Please input a string: " << std::endl;
+
+  // Catch user input and store
+  std::cin >> input;
+
+  // Push value inputted by the user
+  q.push(input);
+
+  // Loop while the queue is not empty, while popping each value
+  while (not q.empty ())
+    {
+      // Output front of the queue
+      std::cout << q.front () << std::endl;
+      // Pop the queue, delete item
+      q.pop ();
+    }
+  // New line, formatting purposes
+  std::cout << std::endl;
+
+  return 0;
+}
